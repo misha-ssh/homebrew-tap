@@ -10,29 +10,32 @@ cask "misha" do
 
   binary "misha"
   manpage "manpages/misha.1.gz"
-  bash_completion "completions/misha.bash"
-  zsh_completion "completions/misha.zsh"
-  fish_completion "completions/misha.fish"
 
   on_macos do
     on_intel do
       url "https://github.com/misha-ssh/cli/releases/download/v0.7.9/misha_Darwin_x86_64.tar.gz"
-      sha256 "0da018ca9109bebd4746d95a2edd3932250e7941a1093da7d09d1e36c11c9775"
+      sha256 "10ceb0d6cf8fd7565bcdeb6ff81c7de5a63d0a65d21200a1b8e294086a64b778"
     end
     on_arm do
       url "https://github.com/misha-ssh/cli/releases/download/v0.7.9/misha_Darwin_arm64.tar.gz"
-      sha256 "540fed0d60128a6c617269eaa1e919f5308cf41a80641a9012bedf181e0dcffd"
+      sha256 "cc37a244ca138ffebe5f820df9aa6ece9d8b7508ed6cf9ca1d585b207daf3666"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/misha-ssh/cli/releases/download/v0.7.9/misha_Linux_x86_64.tar.gz"
-      sha256 "a2b203239345985bfa9a63a4309a0dfd683d5039572f08aa732e526fd8e46571"
+      sha256 "306229bb285466cded13ed0be84ad79e6da1302e28cbc6e30715db5c711ad1c0"
     end
     on_arm do
       url "https://github.com/misha-ssh/cli/releases/download/v0.7.9/misha_Linux_arm64.tar.gz"
-      sha256 "bc0e4faa5fdb25e8dd9af9aa0761ae62568ff66c7fd04b2f0879352800c31f99"
+      sha256 "70171e3f9dcbf5723df22253ce81a7e8c8d942d57c2db4c85482c7a5e235a7aa"
+    end
+  end
+
+  postflight do
+    if system_command("/usr/bin/xattr", args: ["-h"]).exit_status == 0
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/misha"]
     end
   end
 
