@@ -9,26 +9,29 @@ cask "misha" do
   end
 
   binary "misha"
+  bash_completion "completions/misha.bash"
+  zsh_completion "completions/misha.zsh"
+  fish_completion "completions/misha.fish"
 
   on_macos do
     on_intel do
       url "https://github.com/misha-ssh/cli/releases/download/v0.7.9/misha_Darwin_x86_64.tar.gz"
-      sha256 "6c0c552d9534b9652be5b0a3c2826829760f538578a17eeb7672132d6947ecc2"
+      sha256 "e0b0b36f09ef11b70340d920f233d10e9c7fd7ecf8676031d1f158cb6046bc25"
     end
     on_arm do
       url "https://github.com/misha-ssh/cli/releases/download/v0.7.9/misha_Darwin_arm64.tar.gz"
-      sha256 "cd129723b633f34381b9d0e3c4405f1ae950883c7fced0850e601567f733890e"
+      sha256 "c030de7d2bd0c39855fe2e41d25250a1ea032a233b2e16f6965dbde724848a92"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/misha-ssh/cli/releases/download/v0.7.9/misha_Linux_x86_64.tar.gz"
-      sha256 "c46d5274548021e2f6bb8c49cce8b5211a6daba3d68e21032dd71ebe037512ab"
+      sha256 "0e7c2f838a311b97048d4de63c8d4d2ce36a192a49111581d435ce2e76f01a73"
     end
     on_arm do
       url "https://github.com/misha-ssh/cli/releases/download/v0.7.9/misha_Linux_arm64.tar.gz"
-      sha256 "01e56b2ac0d68f25bc8b88ccbee58f1f12bacc2621e63ff583306aa6754d5e5d"
+      sha256 "3d75f985e28d55fa9d7b813752c9dba777727223adf0e0d0d21265d7ad7ab2eb"
     end
   end
 
