@@ -2,7 +2,7 @@
 cask "misha" do
   desc "misha - ssh connection manager"
   homepage ""
-  version "0.8.0"
+  version "0.8.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -13,23 +13,23 @@ cask "misha" do
 
   on_macos do
     on_intel do
-      url "https://github.com/misha-ssh/cli/releases/download/v0.8.0/misha_Darwin_x86_64.tar.gz"
-      sha256 "5c6826779427927bb60dbe9fe664d74fd9acefd7f17e673edd68a761d94e4558"
+      url "https://github.com/misha-ssh/cli/releases/download/v0.8.1/misha_Darwin_x86_64.tar.gz"
+      sha256 "985041f129b87715548c0dba6fd523c744e86c4ac1f4147a26b3759bbc1378a7"
     end
     on_arm do
-      url "https://github.com/misha-ssh/cli/releases/download/v0.8.0/misha_Darwin_arm64.tar.gz"
-      sha256 "bfcfacaac1697804065e007fb81bbc63a312a196a8f652406afbef9aaf55e9ba"
+      url "https://github.com/misha-ssh/cli/releases/download/v0.8.1/misha_Darwin_arm64.tar.gz"
+      sha256 "6e16daf281713d43ec62109b1d073064dd000d1b2e2db4763b7cd1fef4a1e5f2"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/misha-ssh/cli/releases/download/v0.8.0/misha_Linux_x86_64.tar.gz"
-      sha256 "51662ec56e4622be5e34484946e1b8e48166688d6d8ad36740fde6c4e4e563cd"
+      url "https://github.com/misha-ssh/cli/releases/download/v0.8.1/misha_Linux_x86_64.tar.gz"
+      sha256 "7d2299de012bd5ba0867bed6e709d957ea5600db5d97c03588f779bcec2095cd"
     end
     on_arm do
-      url "https://github.com/misha-ssh/cli/releases/download/v0.8.0/misha_Linux_arm64.tar.gz"
-      sha256 "ed534c019663c75976c0ccfee942ceb3e9ee8fd107c03c7f7d08657a0ef677f0"
+      url "https://github.com/misha-ssh/cli/releases/download/v0.8.1/misha_Linux_arm64.tar.gz"
+      sha256 "214dc6d1310aa3e349b77279d30f752bdd63474acf2d42475ad59e2a30965627"
     end
   end
 
